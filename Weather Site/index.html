@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- wrapper -->
+
+    <div class="wrapper">
+        <div class="main-container">
+
+            <h1>WEATHER</h1>
+            <h6>Created By Rydham Gupta</h6>
+            <!-- will contain the tabs -->
+            <div class="tab-container">
+                <div class="tab" user-weather-tab>Your Weather</div>
+                <div class="tab" search-weather-tab>Search Weather</div>
+            </div>
+
+            <div class="main-part">
+                <!-- grant location screen -->
+
+                <div class="grant-location-container">
+                    <img src="images/location.png" width="80" height="80" loading="lazy">
+                    <h2>Grant Location Access</h2>
+                    <p>Allow access to get weather information</p>
+                    <button grant-access-button class="accessbtn">Grant Access</button>
+                </div>
+
+                <!-- search container -->
+
+                <div class="search-container">
+                    <form search-form>
+                        <input placeholder="Search for city..." search-city>
+                        <button search-city-weather-btn>
+                            <img src="images/search.png" width="20" height="20" loading="lazy">
+                        </button>
+                    </form>
+                </div>
+
+                <!-- loading screen container -->
+                <div class="loading-screen-container">
+                    <img src="images/loading.gif" width="150" height="150" loading="lazy">
+                    <p>Loading...</p>
+                </div>
+
+                <!-- user weather info container -->
+                <div class="weather-display-container">
+                    <div class="city-country">
+                        <p city-name class="cityname">city name</p>
+                        <img src="" alt="flag" country-flag>
+                    </div>
+                    <p weather-desc class="weather-desc">Weather description</p>
+                    <img src="" alt="Weather icon" weather-icon>
+                    <div temperature> 25C</div>
+                    <!-- card container -->
+                    <div class="cards-container">
+                        <!-- card -->
+                        <div class="card">
+                            <img src="images/wind.png" alt="">
+                            <p>WINDSPEED</p>
+                            <p wind-speed></p>
+                        </div>
+                        <!-- card -->
+                        <div class="card">
+                            <img src="images/humidity.png" alt="">
+                            <p>HUMIDITY</p>
+                            <p humidity></p>
+                        </div>
+                        <!-- card -->
+                        <div class="card">
+                            <img src="images/cloud.png" alt="">
+                            <p>CLOUDS</p>
+                            <p cloudiness></p>
+                        </div>
+                    </div>
+                </div>
+                <!--img not found container-->
+                <div not-found>
+                    <img src="images/not-found.png" alt="" width="400px">
+                    <div>CITY NOT FOUND : CHECK FOR SPELLING ERROR</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
